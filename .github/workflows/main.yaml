@@ -17,5 +17,7 @@ jobs:
     steps:
     - name: Check out repository code
       uses: actions/checkout@v2
+    - name: Get node modules
+      run: cp -R /workdir/node_modules .
     - name: get environment information
       run: pwd; ls -lah
