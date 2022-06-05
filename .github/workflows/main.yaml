@@ -13,7 +13,7 @@ env:
 jobs:
   Download_and_test:
     name: Download and test
-    runs-on: ubuntu-latest
+    runs-on: martyca/docusaurus_builder
     steps:
     - name: Check out repository code
       uses: actions/checkout@v2
