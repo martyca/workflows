@@ -1,0 +1,21 @@
+name: workflow test
+on:
+  workflow_dispatch:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      # Push events on main branch
+      - master
+#  schedule:
+#    - cron: '0 0 1 * *'
+env:
+  CLOUDFRONT_DISTRO: E2UJEKIJ9MM7JH
+jobs:
+  Download_and_test:
+    name: Download and test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: get environment information
+      run: pwd; ls -lah
